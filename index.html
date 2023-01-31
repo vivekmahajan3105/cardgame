@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .headers{
+        overflow: auto;
+        background-color: rgba(151, 54, 114, 0.486);
+        position: absolute;
+        left: 50%;
+        transform: translate( -50%);
+        width: 1920px;
+        height: 1080px;
+        
+
+    }
+
+    .container {
+        overflow: auto;
+        border: 10px solid orange;
+        border-radius: 7px;
+        background-color: aquamarine;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(4, auto);
+        /* grid-gap: 5rem; */
+        justify-content: space-evenly;
+        width: 80vw;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        row-gap: 50px;
+        /* column-gap: ; */
+    }
+
+    .box {
+        background-color: gray;
+        border: 3px solid burlywood;
+        border-radius: 7px;
+        width: 200px;
+        height: 100px;
+        position: relative;
+        text-align: center;
+        transition: transform 0.2s;
+        transform-style: preserve-3d;
+        margin: 10px;
+        
+        
+    }
+
+
+    .box:hover {
+        cursor: pointer;
+        
+    }
+
+
+    .front .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: purple;
+        box-shadow: 2px 2px 20px purple;
+        border-radius: 5px;
+        border: 1px solid grey;
+        
+
+    }
+
+   
+
+    .back {
+        overflow: auto;
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: gray;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility:hidden;
+        
+
+        
+        
+    }
+
+    .front{
+        overflow: auto;
+
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgb(105, 17, 17);
+color: white;
+transform: rotateY(180deg);
+display: flex;
+justify-content: center;
+align-items: center;
+-webkit-backface-visibility: hidden;
+backface-visibility:hidden;}
+    
+
+    
+
+    .flipped {
+        transform: rotateY(180deg);
+        
+    }
+    .newpage{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: rgb(228, 80, 80);
+        margin-left: 25%;
+        width: 1000px;
+        border: 10px solid cyan;
+        border-color: antiquewhite;
+        background-color: rgb(8, 7, 4);
+        
+        text-align: center;
+        position: absolute;
+        top: 0%;
+        border: 10px;
+        border-radius: 7px;
+        
+    }
+
+    .new9{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: rgb(36, 34, 34);
+        margin-left: 15%;
+        width: 400px;
+        border: 10px;
+        border-color: antiquewhite;
+        background-color: rgb(196, 160, 55);
+        position: absolute;
+        top: 18%;
+        left: 12%;
+        border: 10px;
+        border-radius: 7px;
+    }
+
+    .new8{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: rgb(36, 34, 34);
+        margin-left: 15%;
+        width: 450px;
+        border: 10px;
+        border-color: antiquewhite;
+        background-color: rgb(196, 160, 55);
+        position: absolute;
+        top: 18%;
+        right: 25%;
+        border: 10px;
+        border-radius: 7px;
+    }
+    
+    .image{
+        position: absolute;
+        left: 20px;
+    }
+    .image1{
+        position: absolute;
+        right: 1px;
+    }
+</style>
+
+<body>
+   
+    <header class="headers">
+        <h1></h1>
+        <div class="image">
+            <img src="image.png" alt="" width="400px" height="200px">
+        </div>
+        <div class="image1">
+            <img src="image.png" alt="" width="400px" height="200px">
+        </div>
+    </header>
+    <div class="newpage">
+        <br>
+        CARD MATCHING GAME
+        <br>
+        <br>
+    </div>
+    <div class="new9">&nbsp; SCORE : 3 </div>
+    <div class="new8">&nbsp; ATTEMPTS LEFT : 16 </div>
+    
+    <section class="container">
+        <div class="box" id="box1">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box3">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box4">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box5">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box6">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box7">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box8">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box9">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box10">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box11">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box12">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box13">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box14">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box15">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+        <div class="box" id="box16">
+            <div class="front front1"></div>
+            <div class="back"></div>
+        </div>
+
+    </section> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let words = ["one", "two", "three", "four", "five", "six", "seven", "eight"];
+        words = [...words, ...words];
+
+        const back = Array.from(document.querySelectorAll(".back"))
+        console.log(back);
+        for (let i in back) {
+            console.log(i);
+            let rand = Math.floor(Math.random() * (15 - i));
+            back[i].innerHTML = "<h2>" + words[rand] + "</h2>";
+            console.log(rand);
+            words.splice(rand, 1);
+        }
+
+        const cards = Array.from(document.querySelectorAll(".box"));
+        for (let card of cards) {
+            card.addEventListener("click", (e) => {
+                if (clicked) {
+                    card.classList.add("flipped");
+                    setTimeout(() => {
+                        console.log(card);
+                        console.log(card.lastElementChild);
+                        console.log(card.lastChild)
+                        if ((card.lastElementChild.innerHTML !== clicked.lastElementChild.innerHTML)) {
+                            card.classList.remove("flipped");
+                            clicked.classList.remove("flipped");
+                        }
+                        else {
+                            // card.style.visibility = "hidden";
+                            // clicked.style.visibility = "hidden";
+                        }
+                        clicked = undefined;
+                    }, 500);
+                }
+
+                else {
+                    clicked = card;
+                    card.classList.add("flipped");
+                }
+
+            })
+
+        }
+
+        let clicked;
+
+
+    </script>
+
+</body>
+
+</html>
